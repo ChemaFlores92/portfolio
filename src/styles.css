@@ -24,6 +24,7 @@ body {
   color: var(--ink);
   background: var(--bg);
   line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -32,7 +33,8 @@ a {
 }
 
 .page {
-  width: min(1120px, 92vw);
+  width: 92%;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 2rem 0 3rem;
 }
@@ -52,6 +54,7 @@ a {
 
 .navLinks {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   font-weight: 600;
 }
@@ -107,6 +110,9 @@ h1 {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.8rem 1.1rem;
   border-radius: 8px;
   font-weight: 700;
@@ -130,7 +136,8 @@ h1 {
 }
 
 .heroCard img {
-  width: min(100%, 170px);
+  width: 100%;
+  max-width: 170px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 999px;
@@ -243,8 +250,10 @@ h1 {
 }
 
 .socialIcon {
-  width: 2.65rem;
-  height: 2.65rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 44px;
+  min-height: 44px;
   border: 1px solid var(--line);
   border-radius: 999px;
   display: inline-flex;
@@ -260,6 +269,14 @@ h1 {
   border-color: #d2d2d2;
 }
 
+.btn:focus-visible,
+.navLinks a:focus-visible,
+.socialIcon:focus-visible,
+.card a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
 .socialIcon svg {
   width: 1.35rem;
   height: 1.35rem;
@@ -273,12 +290,16 @@ h1 {
   }
 
   .page {
-    width: min(1120px, 94vw);
+    width: 94%;
   }
 
   .nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
+  }
+
+  .ctaRow {
+    flex-wrap: wrap;
   }
 }

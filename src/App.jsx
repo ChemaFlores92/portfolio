@@ -40,7 +40,7 @@ export default function App() {
 
         <div className="heroGrid">
           <div className="heroText">
-            <p className="badge">Frontent Developer</p>
+            <p className="badge">Frontend Developer</p>
             <h1>
               Desarrollo aplicaciones web modernas con enfoque en rendimiento y UX.
             </h1>
@@ -180,4 +180,3 @@ export default function App() {
     </div>
   );
 }
-
